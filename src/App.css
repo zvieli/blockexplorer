@@ -1,0 +1,235 @@
+body {
+  background: linear-gradient(120deg, #507e95 0%, #232f3e 100%);
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #232f3e;
+}
+
+.main-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: rgba(122, 106, 182, 0.338); /* light purple, semi-transparent */
+  padding: 16px 32px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 8px 32px 0 rgba(44,62,80,0.22), 0 1.5px 0 0 rgba(106,133,182,0.18);
+  backdrop-filter: blur(6px);
+}
+.logo {
+  width: 32px;
+  height: 32px;
+}
+.site-title {
+  font-size: 1.4em;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+h1 {
+  color: #2d3a4b;
+  text-align: center;
+  margin-top: 32px;
+  letter-spacing: 2px;
+  font-size: 2.5em;
+}
+
+h2, h3 {
+  color: #222;
+  margin-top: 0;
+}
+
+.card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(44,62,80,0.10);
+  padding: 32px 28px;
+  margin: 32px auto;
+  max-width: 750px;
+  transition: box-shadow 0.2s;
+  box-sizing: border-box;
+  overflow-wrap: break-word;
+}
+.card:hover {
+  box-shadow: 0 8px 32px rgba(44,62,80,0.18);
+}
+
+.address, .hash, .full-address, .full-hash {
+  word-break: break-all;
+  overflow-wrap: break-word;
+  display: inline-block;
+  max-width: 100%;
+  font-weight: 300;
+}
+
+p, li {
+  word-break: break-word;
+}
+
+.details-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.details-label {
+  font-weight: bold;
+  margin-right: 4px;
+}
+
+a{
+  color: #3a4c60;         
+  font-weight: 800;    
+  font-family: Arial, sans-serif; 
+  transition: color 0.2s ease;   
+}
+
+a:hover {
+  color: #007bff; 
+}
+
+.spinner {
+  border: 4px solid #eee;
+  border-top: 4px solid #3498db;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin: 32px auto;
+  display: block;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg);}
+  100% { transform: rotate(360deg);}
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+  gap: 0.7em;
+  list-style: none;
+  margin: 0;
+}
+
+li {
+
+  
+  margin-bottom: 0.7em;
+  font-size: 1.08em;
+  word-break: break-all;
+}
+
+input, button {
+  font-size: 1.08em;
+  padding: 0.5em 1em;
+  border-radius: 7px;
+  border: 1px solid #bfc9d1;
+  margin-bottom: 0.5em;
+  box-sizing: border-box;
+}
+
+button {
+  background: #3498db;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+button:hover {
+  background: #217dbb;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+/* רספונסיביות למסכים קטנים */
+@media (max-width: 900px) {
+  .card {
+    max-width: 98vw;
+    padding: 18px 6vw;
+    margin: 18px 1vw;
+  }
+  h1 {
+    font-size: 2em;
+    margin-top: 18px;
+  }
+}
+
+@media (max-width: 600px) {
+  .card {
+    max-width: 100vw;
+    padding: 10px 2vw;
+    margin: 10px 0;
+    border-radius: 8px;
+  }
+  h1 {
+    font-size: 1.3em;
+    margin-top: 10px;
+  }
+  ul {
+    padding-left: 8px;
+    gap: 0.4em;
+  }
+  input, button {
+    font-size: 1em;
+    padding: 0.4em 0.7em;
+    border-radius: 5px;
+  }
+  form {
+    gap: 6px;
+    margin-bottom: 12px;
+  }
+}
+
+.App {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin-top: 50px;
+  font-size: 24px;
+}
+
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
