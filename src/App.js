@@ -11,22 +11,26 @@ import SearchResult from './components/SearchResult';
 function App() {
   return (
     <Router>
-      <header className="main-header">
-        <img src="/eth.png" alt="Ethereum" className="logo" />
-        <span className="site-title">ETH Explorer</span>
-      </header>
-      <Routes>
-        {/* Home page: recent blocks */}
-        <Route path="/" element={<BlockList />} />
-        {/* Block details by block number */}
-        <Route path="/block/:blockNumber" element={<BlockDetails />} />
-        {/* Transaction details by hash */}
-        <Route path="/tx/:txHash" element={<TransactionDetails />} />
-        {/* Address details and history */}
-        <Route path="/address/:address" element={<AddressDetails />} />
-        {/* Search for block or transaction by hash */}
-        <Route path="/search/:hash" element={<SearchResult />} />
-      </Routes>
+      <div className="App">
+        <header className="main-header">
+          <img src="/eth.png" alt="Ethereum" className="logo" />
+          <span className="site-title">ETH Explorer</span>
+        </header>
+        <main>
+          <Routes>
+            {/* Home page: recent blocks */}
+            <Route path="/" element={<BlockList />} />
+            {/* Block details by block number */}
+            <Route path="/block/:blockNumber" element={<BlockDetails />} />
+            {/* Transaction details by hash */}
+            <Route path="/tx/:txHash" element={<TransactionDetails />} />
+            {/* Address details and history */}
+            <Route path="/address/:address" element={<AddressDetails />} />
+            {/* Search for block or transaction by hash */}
+            <Route path="/search/:hash" element={<SearchResult />} />
+          </Routes>
+        </main>
+      </div>
     </Router>
   );
 }
