@@ -36,14 +36,35 @@ function BlockList() {
   return (
     <div className="card">
       <BlockSearch />
-      <h2>Recent Blocks</h2>
-      <ul>
-        {blocks.map(block => (
-          <li key={block.number}>
-            <Link to={`/block/${block.number}`}>Block #{block.number}</Link>
-          </li>
-        ))}
-      </ul>
+      <div className="home-sections">
+        <div className="blocks-section">
+          <h2>Recent Blocks</h2>
+          <ul>
+            {blocks.map(block => (
+              <li key={block.number}>
+                <Link to={`/block/${block.number}`}>Block #{block.number}</Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+        
+        <div className="quick-actions">
+          <h3>Quick Actions</h3>
+          <div className="action-buttons">
+            <Link to="/contracts" className="action-btn contract-btn">
+              Explore Contracts
+            </Link>
+            <a 
+              href="https://etherscan.io" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="action-btn external-btn"
+            >
+              Etherscan
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
